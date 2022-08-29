@@ -20,13 +20,12 @@ const BookCreateForm = () => {
     const createNewBook = async (event) => {
         event.preventDefault();
         try {
-            const response = await fetch("/book", {
+            const response = await fetch("/api/book", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(book)
             });
             const json = await response.json();
-            console.log(json)
         } catch (error) {
             console.log(error);
         }

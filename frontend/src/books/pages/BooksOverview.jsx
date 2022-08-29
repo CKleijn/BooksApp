@@ -14,7 +14,7 @@ const BooksOverview = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch("/book", {
+                const response = await fetch("/api/book", {
                     method: "GET"
                 });
                 const json = await response.json();

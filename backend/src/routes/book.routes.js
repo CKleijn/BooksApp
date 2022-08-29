@@ -2,13 +2,13 @@ const express = require("express");
 const router = express.Router();
 const {validateCreateBook, validateUpdateBook, getAllBooks, createBook, getBook, updateBook, deleteBook} = require("../controllers/book.controller");
 
-router.route("/book")
+router.route("/api/book")
     .get(getAllBooks)
-    .post(validateCreateBook, createBook)
+    .post(validateCreateBook, createBook);
 
-router.route("/book/:bookId")
+router.route("/api/book/:bookId")
     .get(getBook)
     .put(validateUpdateBook, updateBook)
-    .delete(deleteBook)
+    .delete(deleteBook);
 
 module.exports = router;

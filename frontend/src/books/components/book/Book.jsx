@@ -7,7 +7,7 @@ import "./Book.scss";
 const Book = (props, { bookKey }) => {
     const deleteBook = () => {
         try {
-            fetch(`/book/${props.book.id}`, {
+            fetch(`/api/book/${props.book.id}`, {
                 method: "DELETE"
             });
             props.setBooks((prevBooks) => {

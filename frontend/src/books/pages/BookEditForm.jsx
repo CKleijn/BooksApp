@@ -14,7 +14,7 @@ const BookEditForm = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch(`/book/${id}`, {
+                const response = await fetch(`/api/book/${id}`, {
                     method: "GET"
                 });
                 const json = await response.json();
@@ -37,7 +37,7 @@ const BookEditForm = () => {
 
     const editBook = (event) => {
         event.preventDefault();
-        fetch(`/book/${id}`, {
+        fetch(`/api/book/${id}`, {
             method: "PUT",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(book)

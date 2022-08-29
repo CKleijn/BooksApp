@@ -1,4 +1,3 @@
-const express = require("express");
 const assert = require("assert");
 const {connValues} = require("../../database/db_conn");
 const mysql = require("mysql2/promise");
